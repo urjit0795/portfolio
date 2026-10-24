@@ -1,5 +1,5 @@
-<!doctype html>
 
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -10,7 +10,6 @@
 <title>Urjit Kurulkar — Applied AI & Machine Learning</title>
 
 <style>
-
 :root {
     --bg:#f8f7f4;
     --ink:#202523;
@@ -332,6 +331,58 @@ section {
     font-size:12px;
 }
 
+/* Beyond the Code section */
+
+.offcourt {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    align-items:stretch;
+}
+
+.offcourt-story {
+    background:var(--soft);
+    border:1px solid #d5ded4;
+    border-radius:7px;
+    padding:32px;
+}
+
+.offcourt-story h3 {
+    font-size:27px;
+    letter-spacing:-.045em;
+    line-height:1.2;
+    margin:14px 0;
+}
+
+.offcourt-story p {
+    color:#506057;
+    font-size:15px;
+}
+
+.offcourt-facts {
+    display:grid;
+    gap:12px;
+}
+
+.offcourt-fact {
+    border:1px solid var(--line);
+    background:#fff;
+    border-radius:6px;
+    padding:18px 22px;
+}
+
+.offcourt-fact strong {
+    display:block;
+    font-size:17px;
+}
+
+.offcourt-fact span {
+    display:block;
+    font-size:12px;
+    color:var(--muted);
+    margin-top:4px;
+}
+
 .contact {
     background:var(--ink);
     color:white;
@@ -370,13 +421,15 @@ footer {
 }
 
 @media(max-width:700px) {
-
     .wrap {
         padding:0 20px;
     }
 
     nav {
-        height:68px;
+        height:auto;
+        min-height:68px;
+        gap:12px;
+        padding:14px 0;
     }
 
     .navlinks {
@@ -398,11 +451,13 @@ footer {
     }
 
     .feature,
-    .projects {
+    .projects,
+    .offcourt {
         grid-template-columns:1fr;
     }
 
-    .feature {
+    .feature,
+    .offcourt-story {
         padding:25px;
     }
 
@@ -419,7 +474,6 @@ footer {
         display:block;
     }
 }
-
 </style>
 </head>
 
@@ -428,532 +482,396 @@ footer {
 <div class="wrap">
 
 <nav>
+    <a class="brand" href="#top">
+        UK<span style="color:var(--green)">.</span>
+    </a>
 
-<a class="brand" href="#top">
-    UK<span style="color:var(--green)">.</span>
-</a>
-
-<div class="navlinks">
-    <a href="#work">Work</a>
-    <a href="#experience">Experience</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-</div>
-
+    <div class="navlinks">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#beyond">Beyond the Code</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
-
 
 <main id="top">
 
 <header class="hero">
+    <div>
+        <div class="eyebrow">
+            Senior Data Scientist · Applied AI
+        </div>
 
-<div>
+        <h1>
+            Hi, I'm Urjit.<br>
+            <span>I build AI that works.</span>
+        </h1>
 
-<div class="eyebrow">
-    Senior Data Scientist · Applied AI
-</div>
+        <p class="lead">
+            I turn machine learning ideas into dependable, production-ready systems —
+            from predictive models and ML platforms to retrieval-augmented applications
+            and recommendation engines.
+        </p>
 
-<h1>
-    Hi, I'm Urjit.<br>
-    <span>I build AI that works.</span>
-</h1>
+        <div class="actions">
+            <a class="btn primary" href="#work">
+                Explore my work ↗
+            </a>
 
-<p class="lead">
-    I turn machine learning ideas into dependable, production-ready systems —
-    from predictive models and ML platforms to retrieval-augmented applications
-    and recommendation engines.
-</p>
+            <a class="btn"
+               href="Urjit_Kurulkar_Resume.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Resume ↗
+            </a>
 
-<div class="actions">
+            <a class="btn"
+               href="https://github.com/urjit0795"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+        </div>
+    </div>
 
-    <a class="btn primary" href="#work">
-        Explore my work ↗
-    </a>
+    <aside class="hero-aside">
+        <strong>What I focus on</strong>
 
-    <a
-        class="btn"
-        href="Urjit_Kurulkar_Resume.pdf"
-        target="_blank"
-        rel="noopener noreferrer">
-        Resume ↗
-    </a>
+        Applied AI & LLM applications<br>
+        Production ML & MLOps<br>
+        Recommendation systems<br>
+        Data science at scale
 
-    <a
-        class="btn"
-        href="https://github.com/urjit0795"
-        target="_blank"
-        rel="noopener noreferrer">
-        GitHub ↗
-    </a>
+        <br><br>
 
-</div>
-
-</div>
-
-
-<aside class="hero-aside">
-
-<strong>What I focus on</strong>
-
-Applied AI & LLM applications<br>
-Production ML & MLOps<br>
-Recommendation systems<br>
-Data science at scale
-
-<br><br>
-
-<strong>Based in</strong>
-
-Tempe, Arizona, United States
-
-</aside>
-
+        <strong>Based in</strong>
+        Tempe, Arizona, United States
+    </aside>
 </header>
 
+<!-- SELECTED WORK -->
 
 <section id="work">
+    <div class="section-head">
+        <h2>Selected work<span style="color:var(--green)">.</span></h2>
+        <p>Things I've built and questions I'm exploring</p>
+    </div>
 
-<div class="section-head">
+    <article class="feature">
+        <div>
+            <span class="tag">Featured · Personal project</span>
 
-<h2>
-    Selected work<span style="color:var(--green)">.</span>
-</h2>
+            <h3>Building an AI recommendation platform</h3>
 
-<p>
-    Things I've built and questions I'm exploring
-</p>
+            <p>
+                A Netflix-inspired recommendation project that starts with classical
+                baselines and extends into semantic retrieval, conversational
+                recommendations, and LLM-powered reranking.
+            </p>
 
-</div>
+            <p>
+                Current research question: when does LLM reranking justify its additional
+                latency and inference cost? Ranking quality evaluation is the next step.
+            </p>
 
+            <a href="https://github.com/urjit0795/Netflix-Recommender"
+               target="_blank"
+               rel="noopener noreferrer">
+                Explore the project on GitHub ↗
+            </a>
+        </div>
 
-<article class="feature">
+        <div class="pipeline" aria-label="Recommendation system architecture">
+            <div class="step">
+                01 · Retrieve
+                <small>Hybrid recommendations + FAISS semantic search</small>
+            </div>
 
-<div>
+            <div class="arrow">↓</div>
 
-<span class="tag">
-    Featured · Personal project
-</span>
+            <div class="step">
+                02 · Reason
+                <small>User preferences + candidate context</small>
+            </div>
 
-<h3>
-    Building an AI recommendation platform
-</h3>
+            <div class="arrow">↓</div>
 
-<p>
-    A Netflix-inspired recommendation project that starts with classical
-    baselines and extends into semantic retrieval, conversational
-    recommendations, and LLM-powered reranking.
-</p>
+            <div class="step">
+                03 · Rank
+                <small>LLM reranking with explanations</small>
+            </div>
 
-<p>
-    Current research question: when does LLM reranking justify its additional
-    latency and inference cost? Ranking quality evaluation is the next step.
-</p>
+            <div class="arrow">↓</div>
 
-<a
-    href="https://github.com/urjit0795/Netflix-Recommender"
-    target="_blank"
-    rel="noopener noreferrer">
+            <div class="step">
+                04 · Evaluate
+                <small>Planned: NDCG@K, recall, latency, cost</small>
+            </div>
+        </div>
+    </article>
 
-    Explore the project on GitHub ↗
+    <div class="projects">
+        <article class="project">
+            <div class="meta">Production ML · Professional work</div>
 
-</a>
+            <h3>Reusable ML platform</h3>
 
-</div>
+            <p>
+                Built reusable infrastructure for training, deployment, inference,
+                monitoring, and retraining across multiple production ML solutions.
+            </p>
 
+            <span class="meta">AWS SageMaker · Python · MLOps</span>
+        </article>
 
-<div
-    class="pipeline"
-    aria-label="Recommendation system architecture">
+        <article class="project">
+            <div class="meta">Applied AI · Professional work</div>
 
-<div class="step">
+            <h3>RAG-powered decision support</h3>
 
-01 · Retrieve
+            <p>
+                Developed retrieval and LLM-based workflows to support advisor guidance,
+                combining semantic search, reranking, and contextual information.
+            </p>
 
-<small>
-    Hybrid recommendations + FAISS semantic search
-</small>
-
-</div>
-
-<div class="arrow">↓</div>
-
-<div class="step">
-
-02 · Reason
-
-<small>
-    User preferences + candidate context
-</small>
-
-</div>
-
-<div class="arrow">↓</div>
-
-<div class="step">
-
-03 · Rank
-
-<small>
-    LLM reranking with explanations
-</small>
-
-</div>
-
-<div class="arrow">↓</div>
-
-<div class="step">
-
-04 · Evaluate
-
-<small>
-    Planned: NDCG@K, recall, latency, cost
-</small>
-
-</div>
-
-</div>
-
-</article>
-
-
-<div class="projects">
-
-<article class="project">
-
-<div class="meta">
-    Production ML · Professional work
-</div>
-
-<h3>
-    Reusable ML platform
-</h3>
-
-<p>
-    Built reusable infrastructure for training, deployment, inference,
-    monitoring, and retraining across multiple production ML solutions.
-</p>
-
-<span class="meta">
-    AWS SageMaker · Python · MLOps
-</span>
-
-</article>
-
-
-<article class="project">
-
-<div class="meta">
-    Applied AI · Professional work
-</div>
-
-<h3>
-    RAG-powered decision support
-</h3>
-
-<p>
-    Developed retrieval and LLM-based workflows to support advisor guidance,
-    combining semantic search, reranking, and contextual information.
-</p>
-
-<span class="meta">
-    RAG · LLMs · Retrieval
-</span>
-
-</article>
-
-</div>
-
+            <span class="meta">RAG · LLMs · Retrieval</span>
+        </article>
+    </div>
 </section>
 
+<!-- EXPERIENCE -->
 
 <section id="experience">
+    <div class="section-head">
+        <h2>Experience<span style="color:var(--green)">.</span></h2>
+        <p>From software engineering and scientific search to production AI</p>
+    </div>
 
-<div class="section-head">
+    <div class="experience">
+        <div class="date">Sep 2022 — Present</div>
 
-<h2>
-    Experience<span style="color:var(--green)">.</span>
-</h2>
+        <div>
+            <h3>Senior Data Scientist (AI/ML Engineering)</h3>
 
-<p>
-    From software engineering and scientific search to production AI
-</p>
+            <p>
+                <strong>University of Phoenix · Arizona, USA</strong>
+            </p>
 
-</div>
+            <p>
+                Designed production RAG solutions supporting 1,500+ advisor interactions
+                per month and improving response relevance by 15%. Built a reusable AI/ML
+                platform for 8+ production solutions, reducing onboarding time by 40%, and
+                developed automated pipelines with SageMaker, Redshift, Airflow, and Kafka.
+            </p>
+        </div>
+    </div>
 
+    <div class="experience">
+        <div class="date">Dec 2017 — Mar 2021</div>
 
-<div class="experience">
+        <div>
+            <h3>Tech Lead / Software Engineer · Telecom Client</h3>
 
-<div class="date">
-    Sep 2022 — Present
-</div>
+            <p>
+                <strong>Tech Mahindra · Pune, India</strong>
+            </p>
 
-<div>
+            <p>
+                Led modernization of a mission-critical agent commission platform from a
+                legacy mainframe to a Java-based architecture, reducing processing time by
+                more than six hours daily. Delivered a production pricing platform, built
+                a demand-estimation model, and automated PL/SQL data pipelines to reduce
+                turnaround time by approximately 20%.
+            </p>
+        </div>
+    </div>
 
-<h3>
-    Senior Data Scientist (AI/ML Engineering)
-</h3>
+    <div class="experience">
+        <div class="date">Jan 2017 — Jun 2017</div>
 
-<p>
-    <strong>University of Phoenix · Arizona, USA</strong>
-</p>
+        <div>
+            <h3>Data Science Intern</h3>
 
-<p>
-    Designed production RAG solutions supporting 1,500+ advisor interactions
-    per month and improving response relevance by 15%. Built a reusable AI/ML
-    platform for 8+ production solutions, reducing onboarding time by 40%, and
-    developed automated pipelines with SageMaker, Redshift, Airflow, and Kafka.
-</p>
+            <p>
+                <strong>
+                    Indian Space Research Organisation (ISRO) · Ahmedabad, India
+                </strong>
+            </p>
 
-</div>
-
-</div>
-
-
-<div class="experience">
-
-<div class="date">
-    Dec 2017 — Mar 2021
-</div>
-
-<div>
-
-<h3>
-    Tech Lead / Software Engineer · Telecom Client
-</h3>
-
-<p>
-    <strong>Tech Mahindra · Pune, India</strong>
-</p>
-
-<p>
-    Led modernization of a mission-critical agent commission platform from a
-    legacy mainframe to a Java-based architecture, reducing processing time by
-    more than six hours daily. Delivered a production pricing platform, built
-    a demand-estimation model, and automated PL/SQL data pipelines to reduce
-    turnaround time by approximately 20%.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="experience">
-
-<div class="date">
-    Jan 2017 — Jun 2017
-</div>
-
-<div>
-
-<h3>
-    Data Science Intern
-</h3>
-
-<p>
-    <strong>
-        Indian Space Research Organisation (ISRO) · Ahmedabad, India
-    </strong>
-</p>
-
-<p>
-    Enhanced indexing and retrieval of scientific documents using Hadoop
-    Distributed File System (HDFS) and developed an NLP-powered semantic search
-    system to make large-scale unstructured scientific repositories easier to
-    search.
-</p>
-
-</div>
-
-</div>
-
+            <p>
+                Enhanced indexing and retrieval of scientific documents using Hadoop
+                Distributed File System (HDFS) and developed an NLP-powered semantic search
+                system to make large-scale unstructured scientific repositories easier to
+                search.
+            </p>
+        </div>
+    </div>
 </section>
 
+<!-- ABOUT -->
 
 <section id="about">
+    <div class="section-head">
+        <h2>A little about me<span style="color:var(--green)">.</span></h2>
+    </div>
 
-<div class="section-head">
+    <p class="about">
+        I'm a data scientist and builder who enjoys the space between research and
+        real-world implementation. My work spans the full ML lifecycle, with a growing
+        focus on applied LLM systems, retrieval, evaluation, and making AI products
+        useful and reliable.
+    </p>
 
-<h2>
-    A little about me<span style="color:var(--green)">.</span>
-</h2>
-
-</div>
-
-<p class="about">
-
-I'm a data scientist and builder who enjoys the space between research and
-real-world implementation. My work spans the full ML lifecycle, with a growing
-focus on applied LLM systems, retrieval, evaluation, and making AI products
-useful and reliable.
-
-</p>
-
-
-<div class="skills">
-
-<span>Python</span>
-<span>SQL</span>
-<span>AWS SageMaker</span>
-<span>Bedrock</span>
-<span>RAG</span>
-<span>FAISS</span>
-<span>LLM evaluation</span>
-<span>Airflow</span>
-<span>Kafka</span>
-<span>Docker</span>
-
-</div>
-
+    <div class="skills">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>AWS SageMaker</span>
+        <span>Bedrock</span>
+        <span>RAG</span>
+        <span>FAISS</span>
+        <span>LLM evaluation</span>
+        <span>Airflow</span>
+        <span>Kafka</span>
+        <span>Docker</span>
+    </div>
 </section>
 
+<!-- BEYOND THE CODE -->
+
+<section id="beyond">
+    <div class="section-head">
+        <h2>Beyond the Code<span style="color:var(--green)">.</span></h2>
+        <p>A little competitive spirit, on and off the court</p>
+    </div>
+
+    <div class="offcourt">
+        <div class="offcourt-story">
+            <span class="tag">🏸 Badminton</span>
+
+            <h3>
+                When I'm not training models, I'm working on my backhand.
+            </h3>
+
+            <p>
+                Badminton has been a big part of my story. I've trained in the sport,
+                had the opportunity to represent Gujarat, and captained my university
+                badminton team during my bachelor's degree.
+            </p>
+
+            <p>
+                I still love the mix of strategy, split-second decisions, teamwork,
+                and a little friendly competition.
+            </p>
+        </div>
+
+        <div class="offcourt-facts">
+            <div class="offcourt-fact">
+                <strong>Represented Gujarat</strong>
+                <span>Competitive badminton</span>
+            </div>
+
+            <div class="offcourt-fact">
+                <strong>University team captain</strong>
+                <span>During my bachelor's degree</span>
+            </div>
+
+            <div class="offcourt-fact">
+                <strong>Badminton training</strong>
+                <span>Always improving the next shot</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EDUCATION -->
 
 <section id="education">
+    <div class="section-head">
+        <h2>Education<span style="color:var(--green)">.</span></h2>
+    </div>
 
-<div class="section-head">
+    <div class="experience">
+        <div class="date">May 2023</div>
 
-<h2>
-    Education<span style="color:var(--green)">.</span>
-</h2>
+        <div>
+            <h3>M.S. Business Analytics</h3>
+            <p>University of Illinois at Chicago · GPA 4.0</p>
+        </div>
+    </div>
 
-</div>
+    <div class="experience">
+        <div class="date">Sep 2017</div>
 
-
-<div class="experience">
-
-<div class="date">
-    May 2023
-</div>
-
-<div>
-
-<h3>
-    M.S. Business Analytics
-</h3>
-
-<p>
-    University of Illinois at Chicago · GPA 4.0
-</p>
-
-</div>
-
-</div>
-
-
-<div class="experience">
-
-<div class="date">
-    Sep 2017
-</div>
-
-<div>
-
-<h3>
-    B.Tech Computer Science
-</h3>
-
-<p>
-    NIIT University · India
-</p>
-
-</div>
-
-</div>
-
+        <div>
+            <h3>B.Tech Computer Science</h3>
+            <p>NIIT University · India</p>
+        </div>
+    </div>
 </section>
 
+<!-- CONTACT -->
 
 <section id="contact">
+    <div class="contact">
+        <div class="eyebrow" style="color:#9ec9ae">
+            Let's connect
+        </div>
 
-<div class="contact">
+        <h2>
+            Have an interesting problem<br>
+            to solve?
+        </h2>
 
-<div
-    class="eyebrow"
-    style="color:#9ec9ae">
+        <p>
+            I enjoy connecting with people working on meaningful challenges in
+            Applied AI, machine learning, and software engineering.
+        </p>
 
-    Let's connect
+        <div class="actions">
+            <a class="btn primary"
+               href="https://www.linkedin.com/in/urjitkurulkar/"
+               target="_blank"
+               rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
 
-</div>
+            <a class="btn"
+               href="https://github.com/urjit0795"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub ↗
+            </a>
 
-
-<h2>
-    Have an interesting problem<br>
-    to solve?
-</h2>
-
-
-<p>
-    I enjoy connecting with people working on meaningful challenges in
-    Applied AI, machine learning, and software engineering.
-</p>
-
-
-<div class="actions">
-
-<a
-    class="btn primary"
-    href="https://www.linkedin.com/in/urjitkurulkar/"
-    target="_blank"
-    rel="noopener noreferrer">
-
-    LinkedIn ↗
-
-</a>
-
-
-<a
-    class="btn"
-    href="https://github.com/urjit0795"
-    target="_blank"
-    rel="noopener noreferrer">
-
-    GitHub ↗
-
-</a>
-
-
-<a
-    class="btn"
-    href="Urjit_Kurulkar_Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer">
-
-    Resume ↗
-
-</a>
-
-</div>
-
-</div>
-
+            <a class="btn"
+               href="Urjit_Kurulkar_Resume.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Resume ↗
+            </a>
+        </div>
+    </div>
 </section>
 
 </main>
 
-
 <footer>
+    <span>
+        © <span id="year">2026</span> Urjit Kurulkar
+    </span>
 
-<span>
-    © <span id="year">2026</span> Urjit Kurulkar
-</span>
-
-<span>
-    Built with intention. No frameworks required.
-</span>
-
+    <span>
+        Built with intention. No frameworks required.
+    </span>
 </footer>
 
 </div>
 
-
 <script>
-
 document.getElementById('year').textContent =
     new Date().getFullYear();
-
 </script>
 
 </body>
-
 </html>
